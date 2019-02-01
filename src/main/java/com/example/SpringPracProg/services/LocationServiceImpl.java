@@ -4,7 +4,9 @@ import com.example.SpringPracProg.entities.Locations;
 import com.example.SpringPracProg.repositories.LocationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
+@Service
 public class LocationServiceImpl implements LocationService {
 
     @Autowired

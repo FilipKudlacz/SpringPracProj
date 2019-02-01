@@ -4,7 +4,9 @@ import com.example.SpringPracProg.entities.Departments;
 import com.example.SpringPracProg.repositories.DepartmentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DepartmentsServiceImpl implements DepartmentsService {
 
     @Autowired

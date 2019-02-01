@@ -4,7 +4,9 @@ import com.example.SpringPracProg.entities.Countries;
 import com.example.SpringPracProg.repositories.CountriesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CountryServiceImpl implements CountryService {
 
     @Autowired

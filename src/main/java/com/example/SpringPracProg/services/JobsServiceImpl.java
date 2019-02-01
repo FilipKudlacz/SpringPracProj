@@ -4,7 +4,9 @@ import com.example.SpringPracProg.entities.Jobs;
 import com.example.SpringPracProg.repositories.JobsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
+@Service
 public class JobsServiceImpl implements JobsService {
 
     @Autowired

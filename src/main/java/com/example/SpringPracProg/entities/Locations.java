@@ -6,8 +6,7 @@ import javax.persistence.*;
 @Table
 public class Locations {
 
-    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "locGen")
-    @SequenceGenerator(name = "locGen", sequenceName = "location_seq")
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "street")
@@ -19,7 +18,7 @@ public class Locations {
     @Column(name = "city")
     private String city;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     private Countries country;
 
     public int getId() {

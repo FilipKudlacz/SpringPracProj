@@ -4,8 +4,9 @@ import com.example.SpringPracProg.entities.Passports;
 import com.example.SpringPracProg.repositories.PassportsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.scheduling.support.SimpleTriggerContext;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PassportServiceImpl implements PassportService {
 
     @Autowired

@@ -6,11 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class CountryServiceImpl implements CountryService {
 
+    private final CountriesRepository countriesRepository;
+
     @Autowired
-    CountriesRepository countriesRepository;
+    public CountryServiceImpl(CountriesRepository countriesRepository) {
+        this.countriesRepository = countriesRepository;
+    }
 
     @Override
     public Iterable<Countries> listAllCountriesPaging(Integer pageNr, Integer howManyOnPage) {
@@ -23,8 +29,8 @@ public class CountryServiceImpl implements CountryService {
     }
 
     @Override
-    public Countries getCountryById(Integer id) {
-        return countriesRepository.findById(id).get();
+    public Optional<Countries> getCountryById(Integer id) {
+        return countriesRepository.findById(id);
     }
 
     @Override
